@@ -31,39 +31,67 @@ library BitsaveHelperLib {
 
     // Events
     event JoinedBitsave(address indexed userAddress);
-    event SavingCreated(string indexed nameOfSaving, uint256 amount, address token);
-    event SavingIncremented(string indexed nameOfSaving, uint256 amountAdded, uint256 totalAmountNow, address token);
+    event SavingCreated(
+        string indexed nameOfSaving,
+        uint256 amount,
+        address token
+    );
+    event SavingIncremented(
+        string indexed nameOfSaving,
+        uint256 amountAdded,
+        uint256 totalAmountNow,
+        address token
+    );
     event SavingWithdrawn(string indexed nameOfSaving);
-    event TokenWithdrawal(address indexed from, address indexed to, uint256 amount);
+    event TokenWithdrawal(
+        address indexed from,
+        address indexed to,
+        uint256 amount
+    );
     event Received(address indexed, uint256);
+    event SystemFaucetDrip(address indexed token, uint256 value);
 
-    function approveAmount(address toApproveUserAddress, uint256 amountToApprove, address targetToken)
-        internal
-        returns (bool)
-    {
+    function approveAmount(
+        address toApproveUserAddress,
+        uint256 amountToApprove,
+        address targetToken
+    ) internal returns (bool) {
         IERC20 token = IERC20(targetToken);
         return token.approve(toApproveUserAddress, amountToApprove);
     }
 
-    function retrieveToken(address toApproveUserAddress, address targetToken, uint256 amountToWithdraw)
-        internal
-        returns (bool)
-    {
+    function retrieveToken(
+        address toApproveUserAddress,
+        address targetToken,
+        uint256 amountToWithdraw
+    ) internal returns (bool) {
         // first request approval
         require(
             // approveAmount(toApproveUserAddress, amountToWithdraw, targetToken),
-            IERC20(targetToken).allowance(toApproveUserAddress, address(this)) >= amountToWithdraw,
+            IERC20(targetToken).allowance(
+                toApproveUserAddress,
+                address(this)
+            ) >= amountToWithdraw,
             "Token could not be withdrawn"
         );
-        return IERC20(targetToken).transferFrom(toApproveUserAddress, address(this), amountToWithdraw);
+        return
+            IERC20(targetToken).transferFrom(
+                toApproveUserAddress,
+                address(this),
+                amountToWithdraw
+            );
     }
 
     // integrate bitsave interest calculator
-    function calculateInterest(uint256 amount)
+    function calculateInterest(
+        uint256 amount
+    )
         internal
-        // uint256 currBitsPointValue
         pure
-        returns (uint256 accumulatedInterest)
+        returns (
+            // uint256 currBitsPointValue
+            uint256 accumulatedInterest
+        )
     {
         accumulatedInterest = amount / 100;
     }
@@ -79,10 +107,21 @@ library BitsaveHelperLib {
         uint256 crp = ((totalSupply - vaultState).div(vaultState)).mul(100);
         uint256 bsRate = maxSupply.div(crp * totalValueLocked);
         uint256 yearsTaken = timeInterval.div(yearInSeconds);
-        accumulatedInterest = ((principal * bsRate * yearsTaken).div(100 * divisor)).toUint();
+        accumulatedInterest = (
+            (principal * bsRate * yearsTaken).div(100 * divisor)
+        ).toUint();
     }
 
-    function transferToken(address token, address recipient, uint256 amount) internal returns (bool isDelivered) {
+    function tokenBalance(address tokenAddr) internal returns (uint256) {
+        IERC20 token = IERC20(tokenAddr);
+        return token.balanceOf(address(this));
+    }
+
+    function transferToken(
+        address token,
+        address recipient,
+        uint256 amount
+    ) internal returns (bool isDelivered) {
         IERC20 Token = IERC20(token);
 
         // convert address to Byte

@@ -148,16 +148,23 @@ contract Bitsave {
             : _savingFee / _childCutPerFee;
     }
 
-    function dripFountain() public inhouseOnly {
-        // send balance - fountain to masterAddress
-        uint256 balance = address(this).balance;
-        if (balance > fountain) {
-            // payable(masterAddress).transfer(balance - fountain);
-            (bool ok, ) = payable(masterAddress).call{
-                value: balance - fountain
-            }("");
-            require(ok, "transfer failed");
+    function dripFountain(address token) public inhouseOnly {
+        if (token == address(0)) {
+            uint256 balance = address(this).balance;
+            // send balance - fountain to masterAddress
+            if (balance > fountain) {
+                // payable(masterAddress).transfer(balance - fountain);
+                (bool ok, ) = payable(masterAddress).call{
+                    value: balance - fountain
+                }("");
+                require(ok, "transfer failed");
+            }
+            emit BitsaveHelperLib.SystemFaucetDrip(token, balance - fountain);
+            return;
         }
+        uint256 tokenBalance = BitsaveHelperLib.tokenBalance(token);
+        BitsaveHelperLib.transferToken(token, masterAddress, tokenBalance);
+        emit BitsaveHelperLib.SystemFaucetDrip(token, tokenBalance);
     }
 
     function handleNativeSaving(

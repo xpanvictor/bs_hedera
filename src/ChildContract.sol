@@ -262,6 +262,12 @@ contract ChildBitsave {
                 (toWithdrawSavings.amount *
                     (100 - toWithdrawSavings.penaltyPercentage)) /
                 100;
+            // transfer remnant to main contract
+            BitsaveHelperLib.transferToken(
+                toWithdrawSavings.tokenId,
+                bitsaveAddress,
+                toWithdrawSavings.amount - amountToWithdraw
+            );
         } else {
             // TODO: handle interest point management
             // bitsave.handleUsersInterest(
