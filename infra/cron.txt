@@ -1,0 +1,2 @@
+
+0 */6 * * * cd ~/lab/w3/cs/bs_core/infra && . .venv/bin/activate && python infra/saving_fee_updater.py >> /var/log/update_fees.log 2>&1

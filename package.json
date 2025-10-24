@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@prb/math": "PaulRBerg/prb-math",
+    "prb-math": "^2.4.3"
+  }
+}

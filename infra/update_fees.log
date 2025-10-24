@@ -1,0 +1,412 @@
+[2025-09-25 09:12:25.835380] ETH Price: $4023.78, SavingFee: 248522533538115 wei (~$1)
+[base] Tx sent: 0x20ca1185d2357713f477034ef91e6af88fa653a5e343f1a054a824ae32873515
+[base] ✅ Tx confirmed in block 35999302
+[celo] Tx sent: 0x12759111b0b0de641073822f342a808df76b26eb500219195566f00ed447e399
+[celo] ✅ Tx confirmed in block 22029582
+[2025-09-25 09:12:48.406417] ETH Price: $4026.05, SavingFee: 248382409557755 wei (~$1)
+[base] Tx sent: 0xe9cc37f0991870a2a21928b2c62eea4cffca16af6595f9374a198ddf856654c0
+[base] ✅ Tx confirmed in block 35999312
+[celo] Tx sent: 0x8467031d2d6066ac91afcce2102861e0b3a88c2977839e0978c9ae7f0de76dc7
+[celo] ✅ Tx confirmed in block 22029592
+[2025-09-26 06:00:05.346297] ETH Price: $3946.72, SavingFee: 253374954392508 wei (~$1)
+[base] Tx sent: 0x32555f09fa3e0577341df047d8fc441f14266f1250be1ed1bc78ffdd11aee76e
+[base] ✅ Tx confirmed in block 36036732
+[celo] Tx sent: 0x52adbbb217843569f0661b87c1fafb71cbdb4f60234659bf7c4c2256dd047091
+[celo] ✅ Tx confirmed in block 22067013
+[2025-09-26 18:00:03.504343] ETH Price: $3987.57, SavingFee: 250779296664384 wei (~$1)
+[base] Tx sent: 0x51961e8a534a0f2fa16d3c063d637291b33203f5eeaccaff3469a470db308919
+[base] ✅ Tx confirmed in block 36058330
+[celo] Tx sent: 0x96c22b78fbecc0f656a14927ee91a76a48c5ad496e533f3a5634155499e2af5b
+[celo] ✅ Tx confirmed in block 22088611
+[2025-09-27 00:00:02.997628] ETH Price: $4028.08, SavingFee: 248257234215805 wei (~$1)
+[base] Tx sent: 0x6de66d95f7270841a3a03c1840ba344c1df3936689c905de202febe746eec595
+[base] ✅ Tx confirmed in block 36069130
+[celo] Tx sent: 0x2ea528ee60dd95493dd9e50a5c332e16662bd2430f7f2f1f72d6bc9f4a106317
+[celo] ✅ Tx confirmed in block 22099411
+[2025-09-27 06:00:08.685065] ETH Price: $4023.08, SavingFee: 248565775475506 wei (~$1)
+[base] Tx sent: 0xdc82b5d4eacd0bd21f9b909b06835aac21441b0cfb40e079b2e10d7f76923dcd
+[base] ✅ Tx confirmed in block 36079935
+[celo] Tx sent: 0xb84d28138212a34fdd2adf1b5a33d01685d9b0f5d7e2187623249956b8fc1640
+[celo] ✅ Tx confirmed in block 22110219
+[2025-09-29 18:00:03.436465] ETH Price: $4142.38, SavingFee: 241407113784829 wei (~$1)
+[base] Tx sent: 0xb416170051d9022148466313bae7a052cd680e7bf556680ea6cadbf1951f15d7
+[base] ✅ Tx confirmed in block 36187930
+[celo] Tx sent: 0x49f591cb584607f3c31f91df54c16bf37283a6bb7eb5dc1591de529a80741183
+[celo] ✅ Tx confirmed in block 22218210
+[2025-09-30 00:00:02.838713] ETH Price: $4228.43, SavingFee: 236494396265280 wei (~$1)
+[base] ❌ Error: Could not connect to base RPC
+[celo] Tx sent: 0x5b7bbd17d0528272a8df3ab1859e6748930d03b350eed3ad0fd0b5bdf2dcfd1e
+[celo] ✅ Tx confirmed in block 22229009
+[2025-09-30 06:00:02.614706] ETH Price: $4191.31, SavingFee: 238588889869754 wei (~$1)
+[base] Tx sent: 0xdb0a38e10a12bd9451d47d7f65113b7e08ed26ad9fe90f685776578e92423cbc
+[base] ✅ Tx confirmed in block 36209529
+[celo] Tx sent: 0xdb7fcf7efc9689b34a48acea8ddb115b78b39113f79a89fea9088995b9447326
+[celo] ✅ Tx confirmed in block 22239809
+[2025-10-02 18:00:03.759255] ETH Price: $4453.21, SavingFee: 224557117225551 wei (~$1)
+[base] Tx sent: 0x6f536105605cefaa81cff9d6c9617f087e209f4ac41b54032a7c887b949553bb
+[base] ✅ Tx confirmed in block 36317530
+[celo] Tx sent: 0x7dd994c47c847fccb01bea09f457d643e61427f26efe806a0df99400f03f853e
+[celo] ✅ Tx confirmed in block 22347811
+[2025-10-03 00:00:03.628979] ETH Price: $4464.64, SavingFee: 223982224770642 wei (~$1)
+[base] Tx sent: 0xf7ad40d51681f94e0f88d62685c85a83be234e55321bcfd5c8d2dafc2439a286
+[base] ✅ Tx confirmed in block 36328330
+[celo] Tx sent: 0x0c3ef2f95a2ad832b30a58a0a919218aee46fc909338931b0696d098b5c09ed2
+[celo] ✅ Tx confirmed in block 22358610
+[2025-10-03 06:00:03.356575] ETH Price: $4496.46, SavingFee: 222397174666293 wei (~$1)
+[base] Tx sent: 0x97dcc73e92ca005d0d0c671780c5a0ab854ad5b401331d1dd984c234975b660b
+[base] ✅ Tx confirmed in block 36339130
+[celo] Tx sent: 0x9983e4b734c57d70361e43dbad77784f81cd0444a85e426fc2448071f10ee200
+[celo] ✅ Tx confirmed in block 22369411
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/.pyenv/versions/3.11.9/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x10436fa50>: Failed to resolve 'api.coingecko.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.coingecko.com', port=443): Max retries exceeded with url: /api/v3/simple/price?ids=ethereum&vs_currencies=usd (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10436fa50>: Failed to resolve 'api.coingecko.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/./saving_fee_updater.py", line 81, in <module>
+    eth_price = get_eth_price_usd()
+                ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/./saving_fee_updater.py", line 47, in get_eth_price_usd
+    resp = requests.get(url, params={"ids": "ethereum", "vs_currencies": "usd"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.coingecko.com', port=443): Max retries exceeded with url: /api/v3/simple/price?ids=ethereum&vs_currencies=usd (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10436fa50>: Failed to resolve 'api.coingecko.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[2025-10-03 18:00:03.541098] ETH Price: $4540.04, SavingFee: 220262376542937 wei (~$1)
+[base] Tx sent: 0xe88184c5b4a23e4a8e6ff45f2b57d57be8931509cfffaf2d000e894ddea79d40
+[base] ✅ Tx confirmed in block 36360730
+[celo] Tx sent: 0x0b1294878954fc3d03555237666c8cdfbc96987b8f3d889819a5922b2d5b3eb1
+[celo] ✅ Tx confirmed in block 22391011
+[2025-10-04 00:00:02.722951] ETH Price: $4528.28, SavingFee: 220834400699603 wei (~$1)
+[base] Tx sent: 0x74662eb44851dbef7d40422b30408eb6bdcd2bab74866958915995603513323e
+[base] ✅ Tx confirmed in block 36371530
+[celo] Tx sent: 0xf4dc7a084409c8ee27a89248a511418c94444cf9a2e4add43f3bf61ec1361b1a
+[celo] ✅ Tx confirmed in block 22401810
+[2025-10-05 00:00:04.318319] ETH Price: $4491.45, SavingFee: 222645248193790 wei (~$1)
+[base] Tx sent: 0x2f35802a492515011106f74a18e68091ed942fff286367a61e0d69862d1605b7
+[base] ✅ Tx confirmed in block 36414730
+[celo] Tx sent: 0x9079455f790ebd6b14933fb3d1843cc8f4c7c69881748ad21b3460becaacdc4d
+[celo] ✅ Tx confirmed in block 22445010
+[2025-10-05 06:00:03.324036] ETH Price: $4575.73, SavingFee: 218544363413051 wei (~$1)
+[base] Tx sent: 0x9e37050facbb7d18b7f2719b91fdfdf31e52a396c8aa8809bd7fe50d19593167
+[base] ✅ Tx confirmed in block 36425530
+[celo] Tx sent: 0x54fb05be29c77fca4275ebf5ea76c425f40bbce8425c5e3d47b1887552c791a3
+[celo] ✅ Tx confirmed in block 22455810
+urllib3.exceptions.SSLError: [SSL: SSLV3_ALERT_BAD_RECORD_MAC] ssl/tls alert bad record mac (_ssl.c:2580)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.coingecko.com', port=443): Max retries exceeded with url: /api/v3/simple/price?ids=ethereum&vs_currencies=usd (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_BAD_RECORD_MAC] ssl/tls alert bad record mac (_ssl.c:2580)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/./saving_fee_updater.py", line 81, in <module>
+    eth_price = get_eth_price_usd()
+                ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/./saving_fee_updater.py", line 47, in get_eth_price_usd
+    resp = requests.get(url, params={"ids": "ethereum", "vs_currencies": "usd"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.coingecko.com', port=443): Max retries exceeded with url: /api/v3/simple/price?ids=ethereum&vs_currencies=usd (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_BAD_RECORD_MAC] ssl/tls alert bad record mac (_ssl.c:2580)')))
+[2025-10-05 18:00:02.797804] ETH Price: $4524.42, SavingFee: 221022805133033 wei (~$1)
+[base] Tx sent: 0x3ae0529309581939f6d67283ac77e4937048d819552c5b8b1a5676e0cd6d8cf4
+[base] ✅ Tx confirmed in block 36447130
+[celo] Tx sent: 0x6a931f2da5388692b456c6d4b758d329c206c1c3e7925214bdfb5309f0bb982b
+[celo] ✅ Tx confirmed in block 22477412
+[2025-10-06 00:00:03.689716] ETH Price: $4512.73, SavingFee: 221595353588626 wei (~$1)
+[base] Tx sent: 0x1ac6fa6b7d031b57a581be7f57c90e4417983dd130836283f4ba55361bcd8c20
+[base] ✅ Tx confirmed in block 36457930
+[celo] Tx sent: 0x0394e649e1c48a7d2dcd16b400503561be4b65782a448088e97462ddabf8bc58
+[celo] ✅ Tx confirmed in block 22488210
+[2025-10-06 12:00:03.326374] ETH Price: $4574.83, SavingFee: 218587357344425 wei (~$1)
+[base] Tx sent: 0xade36af296ac4d518028349b467774a430fe3dd4f85d8bf0b6f78d16857cd704
+[base] ✅ Tx confirmed in block 36479531
+[celo] Tx sent: 0x297eb66bf9ea90cb9016e90c379aeaee71597e56c8112b635fbb4ce11ce30f84
+[celo] ✅ Tx confirmed in block 22509812
+[2025-10-07 00:00:03.014473] ETH Price: $4699.95, SavingFee: 212768220938520 wei (~$1)
+[base] Tx sent: 0x97690e0bfc061d902b64b69b9555dd4fbfb408d60037a885ddf29ee55b3d8108
+[base] ✅ Tx confirmed in block 36501130
+[celo] Tx sent: 0xc74055ac2b1aad7154bfc20c7fcbc8c443294fa2b7c02f03f190de2e4359216f
+[celo] ✅ Tx confirmed in block 22531411
+[2025-10-07 06:00:02.382593] ETH Price: $4715.19, SavingFee: 212080531219314 wei (~$1)
+[base] Tx sent: 0xcde6ba672273cc8f2d4894f76aba8889b2f64d283f772795a0cd04dc2a40cfa4
+[base] ✅ Tx confirmed in block 36511930
+[celo] Tx sent: 0xb1f4d8e198713abe98615a9127e81c0bf0df8f70b77be12671aeb6dac1928b54
+[celo] ✅ Tx confirmed in block 22542210
+[2025-10-08 00:00:03.228925] ETH Price: $4498.71, SavingFee: 222285944192890 wei (~$1)
+[base] Tx sent: 0x80ac34534b6b59a24f8e20a3973ce97efad5a67fca9b40e9dfe05922a1c5e314
+[base] ✅ Tx confirmed in block 36544330
+[celo] Tx sent: 0x87bd0a2abbb601ffbb38248a4f2b825c3ae3bf4b5e56b6edb8c1ed00035f0aeb
+[celo] ✅ Tx confirmed in block 22574610
+[2025-10-08 12:00:03.535011] ETH Price: $4502.71, SavingFee: 222088475606912 wei (~$1)
+[base] Tx sent: 0x5e5adc5f0b0ba7218a56e5d6329a5cd9e25b61d7b01ebeb5f33b0394bf4dae2d
+[base] ✅ Tx confirmed in block 36565930
+[celo] Tx sent: 0x2d536b18b7b38b6690b1ddc8e03f46a00ef9f3976d46a7d6ea6d36c2fca72f53
+[celo] ✅ Tx confirmed in block 22596212
+[2025-10-09 18:00:03.082232] ETH Price: $4286.77, SavingFee: 233275869710761 wei (~$1)
+[base] Tx sent: 0x0384e7e2da785559257ac6bc5b38bbb5c8933a034a7b97109d3f20ac7f1fc71a
+[base] ✅ Tx confirmed in block 36619931
+[celo] Tx sent: 0xf2a4c6fa71d952bde7a4cd1976977836c99d8175d264462e8eff8a724c80f3fd
+[celo] ✅ Tx confirmed in block 22650212
+[2025-10-10 00:00:03.410761] ETH Price: $4378.97, SavingFee: 228364204367693 wei (~$1)
+[base] Tx sent: 0xd161f3d14301dbc016f0fad84af0ecb332285e3d16eaf3f1263a17c7e021666a
+[base] ✅ Tx confirmed in block 36630731
+[celo] Tx sent: 0x2213c09304cecac039ab5ef6c0b8277fa7933f43d0a6bae9d954f035f64495b3
+[celo] ✅ Tx confirmed in block 22661012
+[2025-10-10 06:00:04.180149] ETH Price: $4343.93, SavingFee: 230206287854546 wei (~$1)
+[base] Tx sent: 0x4de2f198267dd1f190e7d3ec248f25f8bc07c001c6a9cffe5f850c2ce2746407
+[base] ✅ Tx confirmed in block 36641531
+[celo] Tx sent: 0xb52bc3e039e853cafdb9420926b5973a336f19ea618c10521b1271ab0884af61
+[celo] ✅ Tx confirmed in block 22671811
+[2025-10-10 12:00:31.711102] ETH Price: $4342.9, SavingFee: 230260885583365 wei (~$1)
+[base] Tx sent: 0xd5754afa6d87a9e9d4a338e8320ec9e7fa105566cf9b800165ab5b315ebb268c
+[base] ✅ Tx confirmed in block 36652344
+[celo] Tx sent: 0xea75ec71ea6dfef97a6352a070ee36b433762938db1ef4d2e64a1bd536675124
+[celo] ✅ Tx confirmed in block 22682624
+[2025-10-10 18:00:03.015460] ETH Price: $4110.44, SavingFee: 243282957542258 wei (~$1)
+[base] Tx sent: 0xa50a57a63aa006a1d877957072dc559b9488aec215d42b11b1bb95fa15c49601
+[base] ✅ Tx confirmed in block 36663130
+[celo] Tx sent: 0x18daf2c77e4d7f4bcad64988cbcba65c1cd32fa080d7a1b1ff59fd3dc5e9928f
+[celo] ✅ Tx confirmed in block 22693412
+[2025-10-11 18:00:03.287025] ETH Price: $3827.79, SavingFee: 261247351604973 wei (~$1)
+[base] Tx sent: 0xac35ade87e8e90915b4303d93fab7c0dd7201e6333b06f60f7c4be9babea592b
+[base] ✅ Tx confirmed in block 36706330
+[celo] Tx sent: 0xd66aa1348dfa9e16e57492e2902c1e337232ce39b7193c84de35c5e5e8999166
+[celo] ✅ Tx confirmed in block 22736610
+[2025-10-12 00:00:03.015626] ETH Price: $3748.99, SavingFee: 266738508238218 wei (~$1)
+[base] Tx sent: 0xc8e15f7a4b172e067bbcd3945f63e8d5cd7461948d2a42032b5884c0e5f20e77
+[base] ✅ Tx confirmed in block 36717130
+[celo] Tx sent: 0xdc6f029bd953d24c79171e8fcc4ec1da20d4d581b73d9c78653bed03a47a3321
+[celo] ✅ Tx confirmed in block 22747411
+[2025-10-12 06:00:02.633752] ETH Price: $3805.09, SavingFee: 262805873185653 wei (~$1)
+[base] Tx sent: 0x3bff55189b726d46eb38021b4ee02a683068a638f08f3fbc6873198c7e201fd8
+[base] ✅ Tx confirmed in block 36727929
+[celo] Tx sent: 0xbc5614156b6aa13878ba777e78c9334b1d455d3a335df39c095a308ea3db9726
+[celo] ✅ Tx confirmed in block 22758210
+[2025-10-12 12:00:03.918543] ETH Price: $3821.97, SavingFee: 261645172515744 wei (~$1)
+[base] Tx sent: 0xad68709bc18ba696a2023c2f4d44cfe7a0c8fc9204946627580212d4b1bc8981
+[base] ✅ Tx confirmed in block 36738730
+[celo] Tx sent: 0xb67cac3402a833c80d9b184002df01837148af659ab62d040d79e64cac6d4564
+[celo] ✅ Tx confirmed in block 22769013
+[2025-10-12 18:00:03.270175] ETH Price: $4109.19, SavingFee: 243356963294469 wei (~$1)
+[base] Tx sent: 0xb028d1e4ea4fb8c245b3a53fd8eb6cfcbccdc2ed14ac219e5f4321421ad8b79d
+[base] ✅ Tx confirmed in block 36749530
+[celo] Tx sent: 0x89eec25c22f06f25ced4dadb9ca88e45eb7145a29dec16faf5580fbe0a7fd3fa
+[celo] ✅ Tx confirmed in block 22779810
+[2025-10-13 00:00:02.839196] ETH Price: $4138.87, SavingFee: 241611840913099 wei (~$1)
+[base] Tx sent: 0x5ce1ffa057bfbb853ed91f5a8655aa8bdf63df77d7c5662cb1e1126fb59c8679
+[base] ✅ Tx confirmed in block 36760330
+[celo] Tx sent: 0x237d59de312e5cb35953ad5426b7023ee3cb1d472342c6d8f1741cded83e5d89
+[celo] ✅ Tx confirmed in block 22790610
+[2025-10-13 12:00:05.452797] ETH Price: $4152.98, SavingFee: 240790950112931 wei (~$1)
+[base] Tx sent: 0x0f59906ee7ede59f5fcb73d16537de315a4236f4eb631255dd2b5a0da64b7c1e
+[base] ✅ Tx confirmed in block 36781932
+[celo] Tx sent: 0x8a7cda215de2e0449d8a6e8fa99e00d3e1c0a3f61cdf051656dc7ca51c07b7d4
+[celo] ✅ Tx confirmed in block 22812213
+[2025-10-13 18:00:03.533233] ETH Price: $4172.18, SavingFee: 239682851650695 wei (~$1)
+[base] Tx sent: 0x1d4746e2943931eea3714e7b574e1017b1add15821fdae43d834d7ba39d2f42c
+[base] ✅ Tx confirmed in block 36792731
+[celo] Tx sent: 0xf7aca6e0169c7dddbd101129e6efc08f6ab42d38effad4f0abbbd0c91aabd440
+[celo] ✅ Tx confirmed in block 22823011
+[2025-10-14 00:00:03.063720] ETH Price: $4273.57, SavingFee: 233996401135350 wei (~$1)
+[base] Tx sent: 0xb22fb8893fac9099fa13cf8c31ca2aa9a847970adc11c235189204e07bd6271d
+[base] ✅ Tx confirmed in block 36803530
+[celo] Tx sent: 0xb949adec537305561bc08122ee1f99f8c45ed08372b845d744c9d8867762cc00
+[celo] ✅ Tx confirmed in block 22833811
+[2025-10-14 06:00:02.371872] ETH Price: $4102.19, SavingFee: 243772228980130 wei (~$1)
+[base] Tx sent: 0x5797b8cc208d9efaefe1ccdd63bb1a0886ea49b785880cc2bd5794a7ef315793
+[base] ✅ Tx confirmed in block 36814329
+[celo] Tx sent: 0xab646e3f1c3d9a7db4a0cc4175f8a2f57d1860cbab219e484b4a21b34a6e78bd
+[celo] ✅ Tx confirmed in block 22844609
+[2025-10-15 18:00:04.234022] ETH Price: $3981.53, SavingFee: 251159730053522 wei (~$1)
+[base] Tx sent: 0x11a77ff8bf2527e54da03e6d3af90675fb9d050dcc0fd14de7efea7be1b47d8e
+[base] ✅ Tx confirmed in block 36879131
+[celo] Tx sent: 0x87ed9d1a9fbe2bf2b9c17364e6da5533e579c7b1beab3035fa9745c9fa84f18c
+[celo] ✅ Tx confirmed in block 22909413
+[2025-10-16 00:00:03.088541] ETH Price: $3962.81, SavingFee: 252346188689339 wei (~$1)
+[base] Tx sent: 0x8e26fede503fa494a2587e98d46c27427f709ed8c60bf5f755ae912e37f60391
+[base] ✅ Tx confirmed in block 36889930
+[celo] Tx sent: 0xb13e919d29046d0f79950c101e98c91beb5308d0dc65e888b32a34a965c1c0be
+[celo] ✅ Tx confirmed in block 22920210
+[2025-10-16 06:00:04.118682] ETH Price: $4005.8, SavingFee: 249638024863947 wei (~$1)
+[base] Tx sent: 0x7376414e9f2de9b3ee3aaa62d4c66b4109b5ff24123d31290622ed2c01aa7e37
+[base] ✅ Tx confirmed in block 36900730
+[celo] Tx sent: 0x83132bd7527814cb8288adc6d2bbe2b9ba9d9e34e1742175ea414747478d236d
+[celo] ✅ Tx confirmed in block 22931011
+[2025-10-16 12:00:03.236774] ETH Price: $4050.24, SavingFee: 246898949198072 wei (~$1)
+[base] Tx sent: 0xe2738cd269b76cad2626cebb642813d8cdfaf506b4e046804cc45e831aa7a1fc
+[base] ✅ Tx confirmed in block 36911532
+[celo] Tx sent: 0x39bdc6cba3c32bd699f730d07fa96c5658e3454fab8500477de442acac25651c
+[celo] ✅ Tx confirmed in block 22941813
+[2025-10-19 00:00:03.871346] ETH Price: $3887.29, SavingFee: 257248623076745 wei (~$1)
+[base] Tx sent: 0x7ce104edc781fb3ad3e06eb674b89f201e32271c93df0df91aeac884bd51424b
+[base] ✅ Tx confirmed in block 37019530
+[celo] Tx sent: 0x53135d757674466b96a6ce43da60ade704d04753171faaaf21c8dd93d900e44c
+[celo] ✅ Tx confirmed in block 23049811
+[2025-10-20 12:00:05.525597] ETH Price: $4026.9, SavingFee: 248329980878591 wei (~$1)
+[base] Tx sent: 0x3052319248322e17a4ed247c0feed7cdf8a9ccb22fa635f49bb20d1b18280751
+[base] ✅ Tx confirmed in block 37084333
+[celo] Tx sent: 0xdfd547257672712bc087509562e7e008c08e160efe6536512a85902e0da67d14
+[celo] ✅ Tx confirmed in block 23114615
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 969, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/.pyenv/versions/3.11.9/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/.pyenv/versions/3.11.9/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/Users/xpan/.pyenv/versions/3.11.9/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.coingecko.com', port=443): Max retries exceeded with url: /api/v3/simple/price?ids=ethereum&vs_currencies=usd (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/./saving_fee_updater.py", line 81, in <module>
+    eth_price = get_eth_price_usd()
+                ^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/./saving_fee_updater.py", line 47, in get_eth_price_usd
+    resp = requests.get(url, params={"ids": "ethereum", "vs_currencies": "usd"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/xpan/lab/w3/cs/bs_core/infra/.venv/lib/python3.11/site-packages/requests/adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.coingecko.com', port=443): Max retries exceeded with url: /api/v3/simple/price?ids=ethereum&vs_currencies=usd (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+[2025-10-21 00:00:04.573669] ETH Price: $3989.57, SavingFee: 250653579207784 wei (~$1)
+[base] Tx sent: 0x73a5e8b639e256fbb1040edb2b9d75d24aaef9e9e911be31c7f1be7f8a9f645d
+[base] ✅ Tx confirmed in block 37105931
+[celo] Tx sent: 0x647a75c06698228eb149dd1d744d12484ece99bfe878c35cc79d8d5528c7e295
+[celo] ✅ Tx confirmed in block 23136212
+[2025-10-21 06:00:03.497819] ETH Price: $3849.33, SavingFee: 259785469159568 wei (~$1)
+[base] Tx sent: 0x7598d277c1975b1fd60d25038acd5b2ab5ea0078f6ca480db99a606bc90efde3
+[base] ✅ Tx confirmed in block 37116730
+[celo] Tx sent: 0x91b31fcc2d9d61fae231aa0b26b46e72aab1287d65aa1aa832fc05bf7c467c18
+[celo] ✅ Tx confirmed in block 23147011
