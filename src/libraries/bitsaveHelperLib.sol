@@ -2,10 +2,12 @@
 pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "prb-math/contracts/PRBMathUD60x18.sol";
 
 library BitsaveHelperLib {
     using PRBMathUD60x18 for uint256;
+    using SafeERC20 for IERC20;
 
     // Constants
     uint256 public constant txnCharge = 0.02 ether;
@@ -57,7 +59,8 @@ library BitsaveHelperLib {
         address targetToken
     ) internal returns (bool) {
         IERC20 token = IERC20(targetToken);
-        return token.approve(toApproveUserAddress, amountToApprove);
+        token.forceApprove(toApproveUserAddress, amountToApprove);
+        return true;
     }
 
     function retrieveToken(
@@ -74,12 +77,12 @@ library BitsaveHelperLib {
             ) >= amountToWithdraw,
             CanNotWithdrawToken(targetToken)
         );
-        return
-            IERC20(targetToken).transferFrom(
-                toApproveUserAddress,
-                address(this),
-                amountToWithdraw
-            );
+        IERC20(targetToken).safeTransferFrom(
+            toApproveUserAddress,
+            address(this),
+            amountToWithdraw
+        );
+        return true;
     }
 
     // integrate bitsave interest calculator
@@ -123,10 +126,8 @@ library BitsaveHelperLib {
         uint256 amount
     ) internal returns (bool isDelivered) {
         IERC20 Token = IERC20(token);
-
-        // convert address to Byte
-        isDelivered = Token.transfer(recipient, amount);
-
+        Token.safeTransfer(recipient, amount);
+        isDelivered = true;
         emit TokenWithdrawal(address(this), recipient, amount);
     }
 }

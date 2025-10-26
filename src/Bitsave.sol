@@ -5,12 +5,13 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./ChildContract.sol";
 import "./libraries/bitsaveHelperLib.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
-contract Bitsave {
+contract Bitsave is ReentrancyGuard {
     // *** Contract parameters ***
     IERC20 public stableCoin;
     IERC20 public csToken;
-    address public masterAddress;
+    address payable public masterAddress;
     uint256 public rewardPool;
     // *** Fountain ***
     uint256 public fountain;
@@ -32,7 +33,7 @@ contract Bitsave {
     constructor(address _stableCoin, address _csToken) payable {
         stableCoin = IERC20(_stableCoin);
         csToken = IERC20(_csToken);
-        masterAddress = msg.sender;
+        masterAddress = payable(msg.sender);
         rewardPool = 0;
         userCount = 0;
         // initial values
@@ -94,7 +95,13 @@ contract Bitsave {
         address originalToken,
         uint256 amount,
         address ownerAddress
-    ) public payable fromABitsaveChildOnly(ownerAddress) returns (bool) {
+    )
+        public
+        payable
+        fromABitsaveChildOnly(ownerAddress)
+        nonReentrant
+        returns (bool)
+    {
         // check amount sent
         // if (amount < poolFee) revert BitsaveHelperLib.AmountNotEnough();
         // retrieve stable coin used from owner address
@@ -148,18 +155,17 @@ contract Bitsave {
             : _savingFee / _childCutPerFee;
     }
 
-    function dripFountain(address token) public inhouseOnly {
+    function dripFountain(address token) public inhouseOnly nonReentrant {
         if (token == address(0)) {
             uint256 balance = address(this).balance;
             // send balance - fountain to masterAddress
+            uint256 drip = 0;
             if (balance > fountain) {
-                // payable(masterAddress).transfer(balance - fountain);
-                (bool ok, ) = payable(masterAddress).call{
-                    value: balance - fountain
-                }("");
+                drip = balance - fountain;
+                (bool ok, ) = masterAddress.call{value: drip}("");
                 require(ok, "transfer failed");
             }
-            emit BitsaveHelperLib.SystemFaucetDrip(token, balance - fountain);
+            emit BitsaveHelperLib.SystemFaucetDrip(token, drip);
             return;
         }
         uint256 tokenBalance = BitsaveHelperLib.tokenBalance(token);

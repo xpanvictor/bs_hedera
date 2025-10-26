@@ -4,8 +4,9 @@ pragma solidity ^0.8.27;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./libraries/bitsaveHelperLib.sol";
 import "./Bitsave.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
-contract ChildBitsave {
+contract ChildBitsave is ReentrancyGuard {
     // *** Contract parameters ***
     address payable public bitsaveAddress;
     IERC20 public stableCoin;
@@ -125,7 +126,7 @@ contract ChildBitsave {
         bool isSafeMode,
         uint256 currentVaultState,
         uint256 currentTotalValueLocked
-    ) public payable bitsaveOnly returns (uint256) {
+    ) public payable bitsaveOnly nonReentrant returns (uint256) {
         // ensure saving does not exist; !
         if (savings[name].isValid) revert BitsaveHelperLib.InvalidSaving();
         // check if end time valid
@@ -188,7 +189,7 @@ contract ChildBitsave {
         uint256 savingPlusAmount,
         uint256 currentVaultState,
         uint256 currentTotalValueLocked
-    ) public payable bitsaveOnly returns (uint256) {
+    ) public payable bitsaveOnly nonReentrant returns (uint256) {
         // fetch savings data
         SavingDataStruct storage toFundSavings = savings[name];
         if (!toFundSavings.isValid) revert BitsaveHelperLib.InvalidSaving();
@@ -249,7 +250,7 @@ contract ChildBitsave {
 
     function withdrawSaving(
         string memory name
-    ) public payable bitsaveOnly returns (string memory) {
+    ) public payable bitsaveOnly nonReentrant returns (string memory) {
         SavingDataStruct storage toWithdrawSavings = savings[name];
         // check if saving exit
         if (!toWithdrawSavings.isValid) revert BitsaveHelperLib.InvalidSaving();
