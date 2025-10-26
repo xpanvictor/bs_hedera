@@ -10,30 +10,21 @@ contract BitsaveScript is Script, BitsaveConfigs {
     Bitsave public bitsave;
     Create2 create2;
 
-    function setUp() public {}
+    function run() external returns (address) {
+        // Load the private key from the .env file
+        uint256 deployerPrivateKey = vm.envUint("HEDERA_PRIVATE_KEY");
 
-    function run() public {
-        vm.startBroadcast();
+        // Start broadcasting transactions with the loaded private key
+        vm.startBroadcast(deployerPrivateKey);
 
-        // create2 = new Create2();
-
-        // // Prepare the bytecode for MyContract
-        // bytes memory bytecode = abi.encodePacked(
-        //     type(Bitsave).creationCode,
-        //     stableCoin,
-        //     csToken
-        // );
-
-        // // Define a salt
-        // bytes32 salt = keccak256(rawSalt);
-
-        // // Deploy using CREATE2
-        // address deployedAddr = create2.deploy(bytecode, salt);
-
-        // console.log("Deployed Contract Address:", deployedAddr);
-
+        // Deploy the contract
         bitsave = new Bitsave(stableCoin, csToken);
 
+        // Stop broadcasting
         vm.stopBroadcast();
+
+        console.log("Bitsave Contract deployed to:", address(bitsave));
+
+        return address(bitsave);
     }
 }

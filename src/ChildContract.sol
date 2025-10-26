@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.23;
+pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./libraries/bitsaveHelperLib.sol";
@@ -52,7 +52,7 @@ contract ChildBitsave {
             currentTotalValueLocked
         );
 
-        totalPoints = accumulatedInterest;
+        totalPoints += accumulatedInterest;
     }
 
     SavingsNamesObj private savingsNamesVar;

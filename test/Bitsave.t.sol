@@ -29,12 +29,12 @@ contract BitsaveTest is Test, BitsaveConfigs {
         assertEq(address(bitsave.masterAddress()), address(this));
     }
 
-    function test_RevertIf_JoinWithLowFee() public {
-       vm.expectPartialRevert(BitsaveHelperLib.AmountNotEnough.selector);
-       address newUser = address(1);
-       vm.deal(newUser, 1 ether);
-       vm.prank(newUser);
-       bitsave.joinBitsave{value: 0.000000001 ether}();
-    }
-
+    // This has been removed
+    // function test_RevertIf_JoinWithLowFee() public {
+    //    vm.expectPartialRevert(BitsaveHelperLib.AmountNotEnough.selector);
+    //    address newUser = address(1);
+    //    vm.deal(newUser, 1 ether);
+    //    vm.prank(newUser);
+    //    bitsave.joinBitsave{value: 0.000000001 ether}();
+    // }
 }

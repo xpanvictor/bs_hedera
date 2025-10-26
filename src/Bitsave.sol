@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.23;
+pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -183,7 +183,7 @@ contract Bitsave {
                 amount
             );
             if (!tokenHasBeenWithdrawn) {
-                revert BitsaveHelperLib.CanNotWithdrawToken("Txn failed");
+                revert BitsaveHelperLib.CanNotWithdrawToken(tokenToSave);
             }
             // let us know you've removed the savings
             emit BitsaveHelperLib.TokenWithdrawal(
@@ -256,9 +256,7 @@ contract Bitsave {
         ChildBitsave userChildContract = ChildBitsave(userChildContractAddress);
 
         userChildContract.createSaving{
-            value: tokenToSave == address(0)
-                ? ChildContractGasFee + amountRetrieved
-                : ChildContractGasFee
+            value: tokenToSave == address(0) ? amountRetrieved : 0
         }(
             nameOfSaving,
             maturityTime,
@@ -332,9 +330,7 @@ contract Bitsave {
         );
 
         userChildContract.incrementSaving{
-            value: isNativeToken
-                ? ChildContractGasFee + savingPlusAmount
-                : ChildContractGasFee
+            value: isNativeToken ? savingPlusAmount : 0
         }(nameOfSavings, amount, currentVaultState, currentTotalValueLocked);
 
         uint256 savingBalance = userChildContract.getSavingBalance(

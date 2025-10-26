@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.23;
+pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "prb-math/contracts/PRBMathUD60x18.sol";
@@ -23,7 +23,7 @@ library BitsaveHelperLib {
     error InvalidTime();
     error UserNotRegistered();
     error InvalidSaving();
-    error CanNotWithdrawToken(string);
+    error CanNotWithdrawToken(address);
     error NotSupported(string);
     error MasterCallRequired();
     // child contract specific
@@ -72,7 +72,7 @@ library BitsaveHelperLib {
                 toApproveUserAddress,
                 address(this)
             ) >= amountToWithdraw,
-            "Token could not be withdrawn"
+            CanNotWithdrawToken(targetToken)
         );
         return
             IERC20(targetToken).transferFrom(
