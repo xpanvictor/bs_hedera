@@ -170,7 +170,8 @@ contract Bitsave {
     function handleNativeSaving(
         uint256 amount,
         address tokenToSave,
-        address userChildContractAddress
+        address userChildContractAddress,
+        uint256 nativeFee
     ) private returns (uint256) {
         // check if native currency saving
         if (tokenToSave != address(0)) {
@@ -201,7 +202,7 @@ contract Bitsave {
                 "Savings invalid"
             );
         } else {
-            amount = msg.value - SavingFee;
+            amount = msg.value - nativeFee;
         }
         return amount;
     }
@@ -236,7 +237,8 @@ contract Bitsave {
         uint256 amountRetrieved = handleNativeSaving(
             amount,
             tokenToSave,
-            userChildContractAddress
+            userChildContractAddress,
+            SavingFee
         );
 
         // TODO:  perform conversion for stableCoin
@@ -326,12 +328,18 @@ contract Bitsave {
         uint256 amountRetrieved = handleNativeSaving(
             amount,
             savingToken,
-            userChildContractAddress
+            userChildContractAddress,
+            0 // inc has no fee
         );
 
         userChildContract.incrementSaving{
-            value: isNativeToken ? savingPlusAmount : 0
-        }(nameOfSavings, amount, currentVaultState, currentTotalValueLocked);
+            value: isNativeToken ? amountRetrieved : 0
+        }(
+            nameOfSavings,
+            amountRetrieved,
+            currentVaultState,
+            currentTotalValueLocked
+        );
 
         uint256 savingBalance = userChildContract.getSavingBalance(
             nameOfSavings
