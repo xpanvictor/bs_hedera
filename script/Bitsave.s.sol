@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.27;
 
 import {Script, console} from "forge-std/Script.sol";
 import {Bitsave} from "../src/Bitsave.sol";
@@ -19,6 +19,7 @@ contract BitsaveScript is Script, BitsaveConfigs {
 
         // Deploy the contract
         bitsave = new Bitsave(stableCoin, csToken);
+        console.log("Bitsave Contract deployed to:", address(bitsave));
 
         // Stop broadcasting
         vm.stopBroadcast();

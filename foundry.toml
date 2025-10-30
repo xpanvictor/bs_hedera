@@ -3,17 +3,14 @@ src = "src"
 out = "out"
 libs = ["lib"]
 solc_version = "0.8.27"
+verifier = "sourcify"
+verifier-url = "https://server-verify.hashscan.io/"
+
 
 [rpc_endpoints]
-base = "${BASE_MAINNET_RPC}"
-baseSepolia = "${BASE_SEPOLIA_RPC}"
-core_testnet = "${CORE_T_RPC_URL}"
-avalanche_mainnet = "${AVALANCHE_RPC_URL}"
 hedera="${HEDERA_TN_RPC_URL}"
 
 [etherscan]
-baseSepolia = { key = "${BASESCAN_API_KEY}", url = "https://api-sepolia.basescan.org/api" }
-base = { key = "${BASESCAN_API_KEY}", url = "https://api.basescan.org/api" }
-avalanche =       { key = "${ETHERSCAN_API_KEY}", url = "https://api.snowtrace.io/api" }
+296 = { key = "", url = "https://ignore.me" }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

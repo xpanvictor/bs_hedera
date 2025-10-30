@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 export const Constants = {
-  stableCoin: "0x05D032ac25d322df992303dCa074EE7392C117b9", // usdt lisk
+  stableCoin: "0xb88339CB7199b77E23DB6E890353E22632Ba630f", // usdc hedera
   stableCoinName: "usdt-lisk",
   masterAddress: "0x125629FAab442e459C1015FCBa50499D0aAB8EE0",
   csToken: ethers.ZeroAddress, // For bitsave token point system
@@ -10,4 +10,5 @@ export const Constants = {
   joinFee: ethers.parseEther("0.0000001"),
   savingFee: ethers.parseEther("0.0000001")
 }
+
 

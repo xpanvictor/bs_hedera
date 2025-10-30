@@ -1,6 +1,53 @@
 {
   "dependencies": {
-    "@prb/math": "PaulRBerg/prb-math",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@prb/math": "github:PaulRBerg/prb-math",
+    "dotenv": "^17.2.3",
     "prb-math": "^2.4.3"
-  }
+  },
+  "name": "bs_hedera",
+  "version": "1.0.0",
+  "description": "the volatile nature of the crypto market.  The contract has an interest formula based on the bitsave protocol to  reward users points that are not fixed but adjust based on market values.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-foundry": "^1.2.0",
+    "@nomicfoundation/hardhat-ignition": "^0.15.0",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^6.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=20.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.14.0",
+    "hardhat-gas-reporter": "^2.3.0",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.3.0",
+    "typescript": ">=4.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpanvictor/bs_hedera.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xpanvictor/bs_hedera/issues"
+  },
+  "homepage": "https://github.com/xpanvictor/bs_hedera#readme"
 }
