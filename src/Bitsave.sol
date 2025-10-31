@@ -7,6 +7,15 @@ import "./ChildContract.sol";
 import "./libraries/bitsaveHelperLib.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
+/**
+ * @title Bitsave
+ * @notice Implements a user-focused savings system where each user gets a child contract
+ *         to manage savings entries. Supports native and ERC-20 savings, incremental
+ *         deposits, and admin-controlled parameters.
+ * @dev The contract deploys a per-user ChildBitsave contract on `joinBitsave()` and
+ *      forwards savings operations to that child. Several functions use modifiers to
+ *      restrict access (e.g., `inhouseOnly`, `registeredOnly`, `fromABitsaveChildOnly`).
+ */
 contract Bitsave is ReentrancyGuard {
     // *** Contract parameters ***
     IERC20 public stableCoin;
@@ -30,6 +39,13 @@ contract Bitsave is ReentrancyGuard {
     uint256 public ChildCutPerFee = 50;
     uint256 public ChildContractGasFee = SavingFee / ChildCutPerFee;
 
+    /**
+     * @notice Construct a new Bitsave instance
+     * @param _stableCoin Address of the stablecoin ERC-20 used internally
+     * @param _csToken Address of the csToken ERC-20 used for rewards/utility
+     * @dev `msg.sender` becomes the `masterAddress`. The contract is payable so a
+     *      starting `fountain` value may be provided.
+     */
     constructor(address _stableCoin, address _csToken) payable {
         stableCoin = IERC20(_stableCoin);
         csToken = IERC20(_csToken);
@@ -68,6 +84,12 @@ contract Bitsave is ReentrancyGuard {
         _;
     }
 
+    /**
+     * @notice Register the caller with Bitsave and deploy a per-user ChildBitsave contract
+     * @dev If the caller is already registered the existing child contract address is returned.
+     *      The function is payable to allow a join fee (`JoinLimitFee`) to be sent if configured.
+     * @return address The address of the caller's ChildBitsave contract
+     */
     function joinBitsave() public payable returns (address) {
         address ownerAddress = msg.sender;
         address currAddr = addressToUserBS[ownerAddress];
@@ -87,10 +109,25 @@ contract Bitsave is ReentrancyGuard {
         return userBSAddress;
     }
 
+    /**
+     * @notice Returns the caller's child contract address
+     * @return address The child contract address associated with msg.sender, or address(0)
+     *         if the caller is not registered
+     */
     function getUserChildContractAddress() public view returns (address) {
         return addressToUserBS[msg.sender];
     }
 
+    /**
+     * @notice Retrieve stablecoin held by the child contract and return success
+     * @dev This function is intended to be called only by a registered child contract
+     *      via the `fromABitsaveChildOnly` modifier. It attempts to retrieve `amount`
+     *      of `stableCoin` from the child and returns the result of the helper call.
+     * @param originalToken Address of the token the owner expects (not used in current impl.)
+     * @param amount Amount to retrieve (in stablecoin decimals)
+     * @param ownerAddress Owner address whose child contract is calling
+     * @return bool True on success
+     */
     function sendAsOriginalToken(
         address originalToken,
         uint256 amount,
@@ -121,6 +158,13 @@ contract Bitsave is ReentrancyGuard {
     }
 
     /// Edit internal vault data
+    /**
+     * @notice Update internal vault parameters (admin only)
+     * @dev Callable only by `masterAddress` via the `inhouseOnly` modifier.
+     * @param _newCurrentVaultState New vault state numerical value used in calculations
+     * @param _newTotalValueLocked New total value locked used by the protocol
+     * @param _newCsToken Optional new address for the `csToken` (use address(0) to skip)
+     */
     function editInternalData(
         uint256 _newCurrentVaultState,
         uint256 _newTotalValueLocked,
@@ -134,6 +178,11 @@ contract Bitsave is ReentrancyGuard {
     }
 
     /// Edit internal stablecoin data
+    /**
+     * @notice Update the stablecoin used by the protocol (admin only)
+     * @dev Callable only by `masterAddress`. Passing `address(0)` is ignored.
+     * @param _newStableCoin Address of the new stablecoin ERC-20 contract
+     */
     function editStableCoin(address _newStableCoin) public inhouseOnly {
         if (_newStableCoin != address(0)) {
             stableCoin = IERC20(_newStableCoin);
@@ -141,6 +190,14 @@ contract Bitsave is ReentrancyGuard {
     }
 
     /// Edit internal vault data
+    /**
+     * @notice Update protocol fees and related derived values (admin only)
+     * @dev Updates `JoinLimitFee`, `SavingFee`, and `ChildCutPerFee`. Recomputes
+     *      `ChildContractGasFee` unless `_childCutPerFee` is zero.
+     * @param _joinFee Minimum join fee in wei (or token smallest unit)
+     * @param _savingFee Fee required when creating a saving (in native wei)
+     * @param _childCutPerFee Divider used to compute child gas fee share
+     */
     function editFees(
         uint256 _joinFee,
         uint256 _savingFee,
@@ -155,6 +212,12 @@ contract Bitsave is ReentrancyGuard {
             : _savingFee / _childCutPerFee;
     }
 
+    /**
+     * @notice Drain any excess funds or tokens above the configured `fountain` reserve
+     * @dev Admin-only. If `token` is address(0) native currency is drained; otherwise
+     *      the token balance is transferred to `masterAddress`.
+     * @param token Address of token to drip, or address(0) for native
+     */
     function dripFountain(address token) public inhouseOnly nonReentrant {
         if (token == address(0)) {
             uint256 balance = address(this).balance;
@@ -173,6 +236,17 @@ contract Bitsave is ReentrancyGuard {
         emit BitsaveHelperLib.SystemFaucetDrip(token, tokenBalance);
     }
 
+    /**
+     * @dev Internal helper to handle native vs ERC-20 saving flows. If `tokenToSave`
+     *      is an ERC-20 address it will attempt to retrieve tokens via the helper
+     *      library and approve the child contract; otherwise it computes value from
+     *      `msg.value` minus the provided `nativeFee`.
+     * @param amount Amount intended to save (ignored for native flow)
+     * @param tokenToSave Token address to save, or address(0) for native
+     * @param userChildContractAddress Address of the user's child contract to approve
+     * @param nativeFee Fee to deduct from native flows
+     * @return uint256 The actual amount retrieved or computed for saving
+     */
     function handleNativeSaving(
         uint256 amount,
         address tokenToSave,
@@ -213,6 +287,19 @@ contract Bitsave is ReentrancyGuard {
         return amount;
     }
 
+    /**
+     * @notice Create a new saving entry for the caller by forwarding to their child contract
+     * @dev Caller must be registered (have a child contract). For native savings the
+     *      call must include at least `SavingFee` in `msg.value` and the saved amount
+     *      is taken from `msg.value - SavingFee`. For ERC-20 savings the caller must
+     *      have previously authorized retrieval via the helper library (e.g., `approve`).
+     * @param nameOfSaving Human-readable name for the saving slot
+     * @param maturityTime UNIX timestamp when maturity occurs
+     * @param penaltyPercentage Penalty percentage applied on early withdrawal
+     * @param safeMode If true, attempt a safe conversion flow (not supported currently)
+     * @param tokenToSave Token address to save, or address(0) for native coin
+     * @param amount Amount to save (for ERC-20 flows). Ignored for native flows.
+     */
     function createSaving(
         string memory nameOfSaving,
         uint256 maturityTime,
@@ -291,6 +378,15 @@ contract Bitsave is ReentrancyGuard {
     ///
     ///    string nameOfSaving
     ///
+    /**
+     * @notice Add funds to an existing saving slot
+     * @dev Caller must be registered. For native savings, send value as `msg.value`.
+     *      For ERC-20 flows, the child contract must be approved to withdraw the tokens
+     *      (the helper library is used to do approvals/withdrawals).
+     * @param nameOfSavings Name of the saving slot to increment
+     * @param tokenToRetrieve Token address used to fund this increment (may be stablecoin)
+     * @param amount Amount to add (ignored for native where `msg.value` is used)
+     */
     function incrementSaving(
         string memory nameOfSavings,
         address tokenToRetrieve,
@@ -364,6 +460,13 @@ contract Bitsave is ReentrancyGuard {
     ///
     ///    string nameOfSaving
     ///
+    /**
+     * @notice Withdraw a saving slot (for the caller)
+     * @dev Forwards the withdraw request to the caller's child contract. Caller must
+     *      be registered. Emits `SavingWithdrawn` via helper library events.
+     * @param nameOfSavings Name of the saving slot to withdraw
+     * @return bool True on success
+     */
     function withdrawSaving(
         string memory nameOfSavings
     ) public registeredOnly(msg.sender) returns (bool) {
@@ -380,6 +483,11 @@ contract Bitsave is ReentrancyGuard {
     receive() external payable {}
 
     // ---------- Private functions ---------------
+    /**
+     * @dev Internal helper overload: returns the child contract address for `myAddress`.
+     * @param myAddress The account whose child contract we want
+     * @return address payable Child contract address (or address(0) if not registered)
+     */
     function getUserChildContractAddress(
         address myAddress
     ) internal view returns (address payable) {
